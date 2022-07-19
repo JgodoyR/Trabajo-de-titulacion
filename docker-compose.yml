@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    container_name: db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+  
+  django:
+    build:
+      context: .
+      dockerfile: ./docker/BackendDockerFile.dockerfile
+    container_name: django
+    command: ./docker/backend.sh
+    environment:
+      POSTGRES_NAME: TrabajoTitulo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_HOST: db
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  
+  vue:
+    build:
+      context: .
+      dockerfile: ./docker/FrontendDockerFile.dockerfile
+    container_name: vue
+    command: ./docker/frontend.sh
+    depends_on:
+      - django
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    
