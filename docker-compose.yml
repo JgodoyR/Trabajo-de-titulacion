@@ -6,8 +6,11 @@ services:
     container_name: db
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: db
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+      - ./database/loadData.sql:/docker-entrypoint-initdb.d/loadData.sql
     restart: unless-stopped
     ports:
       - "5432:5432"
@@ -17,12 +20,7 @@ services:
       context: .
       dockerfile: ./docker/BackendDockerFile.dockerfile
     container_name: django
-    command: ./docker/backend.sh
-    environment:
-      POSTGRES_NAME: TrabajoTitulo
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin
-      POSTGRES_HOST: db
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app
     ports:

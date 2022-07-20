@@ -1,4 +1,4 @@
-\c TrabajoTitulo;
+\c postgres;
 
 /* Roles */
 INSERT INTO public."App_roles"(nombre)
@@ -10,11 +10,14 @@ INSERT INTO public."App_roles"(nombre)
 /* Usuarios */
 INSERT INTO public."App_usuarios"(paterno,materno,nombres,correo,password,rut,rol_id,date_joined,email,first_name,is_active,is_staff,is_superuser,last_login,last_name)
 	VALUES
-	('Perez','Tapia','Hector Campos','hector.peta@gmail.com','pbkdf2_sha256$260000$qfaC787TvEGhP31n9mm6bR$H14G3FPfq126b1P4ZLGt65TrhqJqN5OSFZRrec4wHrs=','16267818-3', 3, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/06', 'asd'),
-	('Gutierrez','Ruiz','Eduardo Ruiz','edsuru@live.cl','pbkdf2_sha256$260000$qfaC787TvEGhP31n9mm6bR$H14G3FPfq126b1P4ZLGt65TrhqJqN5OSFZRrec4wHrs=','12339396-1',3, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/06', 'asd'),
-	('Ferrer','Gutierrez','Felipe Garrido','ferrerartu@smail.com','pbkdf2_sha256$260000$qfaC787TvEGhP31n9mm6bR$H14G3FPfq126b1P4ZLGt65TrhqJqN5OSFZRrec4wHrs=','12659418-6',3, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/04', 'asd'),
-	('Pascual','Jimenez','Ximena Morales','ximenapascual@hotmail.cl','pbkdf2_sha256$260000$qfaC787TvEGhP31n9mm6bR$H14G3FPfq126b1P4ZLGt65TrhqJqN5OSFZRrec4wHrs=','18864964-5',3, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/05', 'asd'),
-	('Mora','Saez','Maria Moreno','mamoreno@gmail.com','pbkdf2_sha256$260000$qfaC787TvEGhP31n9mm6bR$H14G3FPfq126b1P4ZLGt65TrhqJqN5OSFZRrec4wHrs=','24936172-0',3, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/06', 'asd');
+	('Perez','Tapia','Hector Campos','hector.peta@gmail.com','pbkdf2_sha256$320000$dvhJf7yYiGHv6j9Gn9yhpW$Opgh21Im5/f05nkV6+ll6dkXeo1YneUKjO3VhCCSX98=','16267818-3', 3, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/06', 'asd'),
+	('Gutierrez','Ruiz','Eduardo Ruiz','edsuru@live.cl','pbkdf2_sha256$320000$dvhJf7yYiGHv6j9Gn9yhpW$Opgh21Im5/f05nkV6+ll6dkXeo1YneUKjO3VhCCSX98=','12339396-1',3, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/06', 'asd'),
+	('Ferrer','Gutierrez','Felipe Garrido','ferrerartu@smail.com','pbkdf2_sha256$320000$dvhJf7yYiGHv6j9Gn9yhpW$Opgh21Im5/f05nkV6+ll6dkXeo1YneUKjO3VhCCSX98=','12659418-6',3, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/04', 'asd'),
+	('Pascual','Jimenez','Ximena Morales','ximenapascual@hotmail.cl','pbkdf2_sha256$320000$dvhJf7yYiGHv6j9Gn9yhpW$Opgh21Im5/f05nkV6+ll6dkXeo1YneUKjO3VhCCSX98=','18864964-5',3, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/05', 'asd'),
+	('Mora','Saez','Maria Moreno','mamoreno@gmail.com','pbkdf2_sha256$320000$dvhJf7yYiGHv6j9Gn9yhpW$Opgh21Im5/f05nkV6+ll6dkXeo1YneUKjO3VhCCSX98=','24936172-0',3, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/06', 'asd'),
+	('a','a','admin','admin@gmail.com','pbkdf2_sha256$320000$dvhJf7yYiGHv6j9Gn9yhpW$Opgh21Im5/f05nkV6+ll6dkXeo1YneUKjO3VhCCSX98=','1',1, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/06', 'asd'),
+	('p','p','profesor','profesor@gmail.com','pbkdf2_sha256$320000$dvhJf7yYiGHv6j9Gn9yhpW$Opgh21Im5/f05nkV6+ll6dkXeo1YneUKjO3VhCCSX98=','2',2, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/06', 'asd'),
+	('e','e','estudiante','estudiante@gmail.com','pbkdf2_sha256$320000$dvhJf7yYiGHv6j9Gn9yhpW$Opgh21Im5/f05nkV6+ll6dkXeo1YneUKjO3VhCCSX98=','3',3, '2020/10/10', 'asd', 'asd', False, False, False, '2022/06/06', 'asd');
 
 /* Tecnologias */
 INSERT INTO public."App_tecnologias" (nombre, descripcion)
@@ -22,7 +25,6 @@ INSERT INTO public."App_tecnologias" (nombre, descripcion)
 	('Docker','Docker es un proyecto de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software, proporcionando una capa adicional de abstracción y automatización de virtualización de aplicaciones en múltiples sistemas operativos.​'),
 	('Git', 'Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia, la confiabilidad y compatibilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente.'),
 	('Minikube','Minikube es la solución ideal para pequeños proyectos basados ​en contenedores. Te permite, por ejemplo, configurar un clúster de Kubernetes en privado sin tener que trabajar directamente con todo un servidor o una nube.');
-	/*('Jenkins','Jenkins es un servidor de automatización open source escrito en Java. Está basado en el proyecto Hudson y es, dependiendo de la visión, un fork del proyecto o simplemente un cambio de nombre.');*/
 
 /* Ejercicios */
 INSERT INTO public."App_ejercicios" (nombre, enunciado, respuesta1, respuesta2, tecnologia_id)
@@ -36,7 +38,6 @@ INSERT INTO public."App_ejercicios" (nombre, enunciado, respuesta1, respuesta2, 
 	('Ejecutar un contenedor','Escriba el comando que se utiliza para ejecutar un contenedor.', 'docker run', NULL, 1),
 	('Suba los cambios al repositorio remoto', 'Escriba el comando que se utiliza para enviar los cambios del repositorio local al repositorio remoto.', 'git commit', NULL, 2),
 	('Ver los nodos de un cluster','Escriba el comando que permite observar los nodos que se encuentran dentro del cluster.', 'kubectl get nodes', NULL, 3);
-	/*('Jenkins','Vivamus bibendum arcu mi, quis bibendum mauris facilisis ullamcorper. Phasellus vehicula neque tellus, non laoreet sapien laoreet quis. Proin scelerisque aliquet auctor. Nulla ac blandit erat, non porttitor enim. Vivamus venenatis, arcu sit amet lacinia volutpat, tortor diam suscipit mi, nec rhoncus eros leo in nulla. Vestibulum maximus, sem sed venenatis molestie.', 'chao', NULL, 4);*/
 
 /* Clases */
 INSERT INTO public."App_clases" (titulo, descripcion, tecnologia_id)
@@ -98,7 +99,16 @@ INSERT INTO public."App_usuario_ejercicio" (tiempo, estado, respuesta, ejercicio
 	(990000, 1, 'b', 6, 5),
 	(50500, 1, 'test', 7, 5),
 	(70000, 1, 'a', 8, 5),
-	(990000, 1, 'b', 9, 5);
+	(990000, 1, 'b', 9, 5),
+	(NULL, 0, NULL, 1, 8),
+	(NULL, 0, NULL, 2, 8),
+	(NULL, 0, NULL, 3, 8),
+	(NULL, 0, NULL, 4, 8),
+	(NULL, 0, NULL, 5, 8),
+	(NULL, 0, NULL, 6, 8),
+	(NULL, 0, NULL, 7, 8),
+	(NULL, 0, NULL, 8, 8),
+	(NULL, 0, NULL, 9, 8);
 
 /* Usuario_Clase */
 INSERT INTO public."App_usuario_clase" (tiempo, estado, clase_id, usuario_id)
@@ -147,7 +157,16 @@ INSERT INTO public."App_usuario_clase" (tiempo, estado, clase_id, usuario_id)
 	(20000, 1, 6, 5),
 	(20000, 1, 7, 5),
 	(20000, 1, 8, 5),
-	(20000, 1, 9, 5);
+	(20000, 1, 9, 5),
+	(NULL, 0, 1, 8),
+	(NULL, 0, 2, 8),
+	(NULL, 0, 3, 8),
+	(NULL, 0, 4, 8),
+	(NULL, 0, 5, 8),
+	(NULL, 0, 6, 8),
+	(NULL, 0, 7, 8),
+	(NULL, 0, 8, 8),
+	(NULL, 0, 9, 8);
 	
 END;
 
