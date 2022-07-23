@@ -1,5 +1,7 @@
 #!/bin/sh
-cd src/
+
+cd /src/
+
 npm install
 
 npm run serve

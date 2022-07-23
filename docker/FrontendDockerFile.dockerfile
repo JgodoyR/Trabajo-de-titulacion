@@ -7,3 +7,4 @@ EXPOSE 8000
 RUN npm install -g npm
 
 RUN npm install
+

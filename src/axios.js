@@ -5,7 +5,7 @@ import axios from 'axios'
 import Vue from 'vue'
 
 const axiosInstance = axios.create({ 
-  baseURL: 'http://198.199.82.240:8000'//'http://127.0.0.1:8000'
+  baseURL: 'http://198.199.82.240:8000'
 })
 
 Vue.prototype.$http = axiosInstance;
