@@ -190,7 +190,6 @@ class UsuariosPasswordSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
-
 class UsuariosPasswordlessSerializer(serializers.ModelSerializer):
 
     class Meta:

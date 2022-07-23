@@ -6,5 +6,3 @@ RUN pip install -r /app/requirements.txt
 COPY . /app
 WORKDIR /app
 EXPOSE 8000
-
-

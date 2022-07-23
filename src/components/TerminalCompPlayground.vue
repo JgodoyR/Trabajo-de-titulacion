@@ -23,7 +23,7 @@ import { FitAddon } from 'xterm-addon-fit'
             cols: 130,
         });
 
-        var socket = new WebSocket(`ws://localhost:2375/containers/docker/attach/ws?logs=0&stream=1&stdin=1&stdout=1&stderr=1`);
+        var socket = new WebSocket(`ws://198.199.82.240:2375/containers/docker/attach/ws?logs=0&stream=1&stdin=1&stdout=1&stderr=1`);
         var attachAddon = new AttachAddon(socket);
         var fitAddon = new FitAddon();
 

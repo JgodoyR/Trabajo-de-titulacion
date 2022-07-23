@@ -89,6 +89,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'db',
+        #'HOST': '127.0.0.1',
         'DATABASE_PORT': '5432',
     }
 }
@@ -140,7 +141,8 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:8080',
     'http://127.0.0.1:8080',
-    'http://db:5432'
+    'http://db:5432',
+    'http://:198.199.82.240:8080'
 )
 
 AUTH_USER_MODEL = 'App.Usuarios'
