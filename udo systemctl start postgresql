@@ -1,0 +1,5 @@
+[0;1;31m×[0m postgresql@14-main.service - PostgreSQL Cluster 14-main
+     Loaded: loaded (/lib/systemd/system/postgresql@.service; enabled-runtime; vendor preset: enabled)
+     Active: [0;1;31mfailed[0m (Result: protocol) since Sun 2022-07-24 17:14:39 UTC; 31s ago
+    Process: 121315 ExecStart=/usr/bin/pg_ctlcluster --skip-systemctl-redirect 14-main start [0;1;31m(code=exited, status=1/FAILURE)[0m
+        CPU: 108ms

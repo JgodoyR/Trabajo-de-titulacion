@@ -7,7 +7,7 @@ services:
     container_name: db
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: Niko2794*
       POSTGRES_DB: postgres
     volumes:
    #   - ./data/db:/var/lib/postgresql/data
